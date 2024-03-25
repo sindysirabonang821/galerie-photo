@@ -2,8 +2,6 @@
     margin: 0;
     padding: 0;
 }
-body{
-}
 .div-entete{
     width: 100%;   
     height: 100px;
@@ -79,20 +77,64 @@ button{
 }
 .div2{
     display:flex;
+    padding: 10%;
     align-items: center;
     justify-content: center;
     gap: 10px;
+    /* overflow-x: auto; */
+    /* overflow-y: hidden; */
+    animation-name: designer;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    /* max-height: 120px;
+    max-width: 50%; */
+}
+.div2::-webkit-scrollbar{
+    display: none;
+    /* width: 0; */
+}
+.vid1{
+    width: 34%;
+}
+.vid2{
+    width: 29%;
+}
+video{
+    width: 32%;
+}
+@keyframes designer{
+    0%,10%{transform: translateX(0%);}
+    20%,30%{transform: translateX(30%);}
+    40%,50%{transform: translateX(50%);}
+    60%,70%{transform: translateX(60);}
+    80%,85%{transform: translateX(-70%);}
+    85%,90%{transform: translateX(-90%);}
+    100%{transform: translateX(-100%);}
 }
 .rou{
     width: 30%;
 }
-.vi{}
+.vi video{
+    width: 30%;
+}
 .million{
     border: 1px solid black;
     border-radius: 20px;
     font-size:18px;
     padding: 1%;
     width: 10px;
+    animation-name: mill;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+}
+@keyframes mill{
+    0%{background-color: #ffda79;}
+    25%{background-color: #ffabe7;}
+    50%{background-color: #d2bcf3;}
+    75%{background-color: edf3d8;}
+    100%{background-color: #ffda79;}
 }
 p{
     font-size: 18px;
@@ -120,7 +162,7 @@ img{
 .brow{
     color: #000;
     border-radius: 20px;
-    padding: 3%;
+    /* padding: 3%; */
     background-color: #FFF;
     border: 1px solid black;
     margin-bottom: 10px;
@@ -162,8 +204,89 @@ padding:18px;
 .join{
     text-decoration: underline;
 }
+.foot1{
+    display: flex;
+    gap: 10px;
+    /* overflow: hidden; */
+    overflow-x: auto;
+    overflow-y: hidden;
+    animation-name: picture;
+    animation-duration: 35s;
+    animation-iteration-count: infinite;
+    max-width: 90%;
+}
+.foot1 > img{
+width: 160px;
+box-shadow: #f8f7f4;
+overflow: hidden;
+}
 .foot2{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 10%;
+}
+.foot3{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2%;
+
+}
+@keyframes picture {
+    0%{transform: translateX(0%);}
+    20%{transform: translateX(20%);}
+    40%{transform: translateX(-40%);}
+    60%{transform: translateX(-60%);}
+    100%{transform: translateX(-100%);}
+}
+.foot1::-webkit-scrollbar{
+    display: none;
+}
+@media screen and (max-width:900px) {
+    .div-entete{
+        display: flex;
+        flex-direction: column;
+    }
+    ul{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .div2{
+    display:flex;
+    /* padding: 10%; */
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    /* overflow-x: auto; */
+    /* overflow-y: hidden; */
+    animation-name: designer;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    max-width: 40%;
+}
+.million{
+    border: 1px solid black;
+    border-radius: 20px;
+    font-size:18px;
+    padding: 0;
+    width: 10px;
+    animation-name: mill;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+}
+.div1{
+    text-align: center;
+    line-height: 70px;
+    gap: 10px;
+    margin-top: 55px;
+    /* display: flex;
+    flex-direction: column; */
+}
+.inscription{
+    display: flex;
+    flex-wrap: nowrap;
+}
 }
