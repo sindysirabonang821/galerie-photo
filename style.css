@@ -3,8 +3,8 @@
     padding: 0;
 }
 .div-entete{
-    width: 100%;   
-    height: 100px;
+    /* width: 100%;   
+    height: 100px; */
     background-color: #f8f7f4;
     display: flex;
     align-items: center;
@@ -25,10 +25,13 @@ ul{
     justify-content: center;
     gap: 10px; */
 }
+.test{
+    display: none;
+}
 a{
     color: #000;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 20px;
 }
 form{
     display: flex;
@@ -42,7 +45,7 @@ input[type=search]{
     outline: none;
 }
 :placeholder-shown{
-    font-size: 15px;
+    font-size: 20px;
 }
 input[type=submit]{
     background-color: #000;
@@ -51,14 +54,18 @@ input[type=submit]{
     height: 40px;
     width: 100px;
     border-radius: 45px;
-    font-size: 15px;
+    font-size: 20px;
 }
 button{
     border: none;
     outline: none;
     padding: 15px;
     background-color: #f8f7f4;
-    font-size: 15px;
+    font-size: 20px;
+}
+body{
+    overflow: hidden;
+    overflow-y: auto;
 }
 .main1{
     background-color: #f8f7f4;
@@ -73,7 +80,7 @@ button{
 }
 .titre1{
     text-align: center;
-    font-size: 40px;
+    font-size: 45px;
 }
 .div2{
     display:flex;
@@ -82,46 +89,54 @@ button{
     justify-content: center;
     gap: 10px;
     /* overflow-x: auto; */
-    /* overflow-y: hidden; */
+    /* overflow: hidden; */
     animation-name: designer;
     animation-duration: 15s;
     animation-iteration-count: infinite;
     animation-direction: normal;
-    /* max-height: 120px;
-    max-width: 50%; */
+    animation-timing-function: linear;
 }
-.div2::-webkit-scrollbar{
-    display: none;
-    /* width: 0; */
-}
+
 .vid1{
-    width: 34%;
+    width: 52%;
+    border-radius: 10px;
 }
 .vid2{
-    width: 29%;
+    width: 26%;
+    border-radius: 10px;
 }
 video{
-    width: 32%;
+    width: 50%;
+    border-radius: 10px;
 }
 @keyframes designer{
-    0%,10%{transform: translateX(0%);}
+    form{
+    transform: translateX(0%);
+    } 
+    to{
+        
+            transform: translateX(-100%);
+        
+    }
+    /* overflow: hidden; */
+    /* 0%,10%{transform: translateX(0%);}
     20%,30%{transform: translateX(30%);}
     40%,50%{transform: translateX(50%);}
     60%,70%{transform: translateX(60);}
     80%,85%{transform: translateX(-70%);}
     85%,90%{transform: translateX(-90%);}
-    100%{transform: translateX(-100%);}
+    100%{transform: translateX(-100%);} */
 }
 .rou{
-    width: 30%;
+    /* width: 50%; */
 }
 .vi video{
-    width: 30%;
+    width: 50%;
 }
 .million{
     border: 1px solid black;
     border-radius: 20px;
-    font-size:18px;
+    font-size:20px;
     padding: 1%;
     width: 10px;
     animation-name: mill;
@@ -137,10 +152,10 @@ video{
     100%{background-color: #ffda79;}
 }
 p{
-    font-size: 18px;
+    font-size: 20px;
 }
 .para{
-    font-size: 80px;
+    font-size: 90px;
 }
 .bouton{
     border: 1px solid black;
@@ -194,26 +209,32 @@ padding:18px;
     padding: 18px;
 }
 .titre{
-    font-size: 50px;
+    font-size: 60px;
     padding: 20px;
 }
 .lig{
-    font-size: 20px;
+    font-size: 30px;
     line-height: 50px;
 }
 .join{
     text-decoration: underline;
 }
+.art{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
 .foot1{
     display: flex;
     gap: 10px;
     /* overflow: hidden; */
-    overflow-x: auto;
-    overflow-y: hidden;
+    /* overflow-x: auto; */
+    /* overflow-y: hidden; */
     animation-name: picture;
     animation-duration: 35s;
     animation-iteration-count: infinite;
     max-width: 90%;
+    animation-timing-function: linear;
 }
 .foot1 > img{
 width: 160px;
@@ -234,16 +255,32 @@ overflow: hidden;
 
 }
 @keyframes picture {
-    0%{transform: translateX(0%);}
+    form{
+        transform: translateX(0%);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+    /* 0%{transform: translateX(0%);}
     20%{transform: translateX(20%);}
     40%{transform: translateX(-40%);}
     60%{transform: translateX(-60%);}
-    100%{transform: translateX(-100%);}
+    100%{transform: translateX(-100%);} */
 }
 .foot1::-webkit-scrollbar{
     display: none;
 }
-@media screen and (max-width:900px) {
+.teste{
+    display: none;
+}
+/* .teste:hover + ul {
+    display: block;
+    color: red;
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 10px;
+} */
+/* @media screen and (max-width:900px) {
     .div-entete{
         display: flex;
         flex-direction: column;
@@ -254,12 +291,10 @@ overflow: hidden;
     }
     .div2{
     display:flex;
-    /* padding: 10%; */
+    padding: 10%;
     align-items: center;
     justify-content: center;
     gap: 10px;
-    /* overflow-x: auto; */
-    /* overflow-y: hidden; */
     animation-name: designer;
     animation-duration: 15s;
     animation-iteration-count: infinite;
@@ -282,11 +317,382 @@ overflow: hidden;
     line-height: 70px;
     gap: 10px;
     margin-top: 55px;
-    /* display: flex;
-    flex-direction: column; */
 }
 .inscription{
     display: flex;
     flex-wrap: nowrap;
 }
+} */
+@media screen and (min-width: 360px) and (max-width: 460px) {
+    /* *{
+        border: 1px solid red;
+    } */
+    .teste{
+        display: block;
+    }
+    .teste:hover + ul {
+        display: block;
+        color: blue;
+        display: flex;
+        flex-wrap: nowrap;
+        padding: 10px;
+    }
+    li{
+        display: inline;
+        padding: 9px;
+    }
+    ul{
+        display: flex;
+        flex-wrap: nowrap;
+        padding: 10px;
+        display: inline-block;
+        display: none;
+    }
+    input[type=search]{
+        border-radius: 50px;
+        padding: 10px;
+        border: none;
+        outline: none;
+    }
+    :placeholder-shown{
+        font-size: 15px;
+    }
+    input[type=submit]{
+        background-color: #000;
+        color: #f8f7f4;
+        padding: 0px 10px;
+        height: 40px;
+        width: 70px;
+        border-radius: 45px;
+        font-size: 15px;
+    }
+    .tag{
+        display: flex;
+        flex: 1 1 auto;
+        flex-wrap: nowrap;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        padding: 10px;
+    }
+    .foot2{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        padding: 5%;
+    }
+    .main3{
+        width: 420px;
+    }
+    .main1{
+        width: 100%;
+    }
+    nav{
+        width: 490px;
+    }
+    .photo{
+        width: 360px;
+        display: flex;
+        flex-direction: column;
+    }
+    img,.div2{
+        width: 100%;
+    }
+    .rou{
+        width: 50%;
+    }
+    .div2  > .vi{
+        width: 57%;
+    }
+    .div2  >.vid1{
+        width: 60%;
+        border-radius: 10px;
+    }
+    .div2  >.vid2{
+        width: 51%;
+        border-radius: 10px;
+    }
+    video{
+        width: 50%;
+        border-radius: 10px;
+    }
+    body{
+            overflow: hidden;
+            overflow-y: auto;
+    }
+    .div2{
+        max-width: 50%;
+        width: 100%;
+    }
+    .div-entete{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    #debut{
+        width: 420px;
+    }
+    .boxe{
+        width: 490px;
+    }
+    .photo{
+        width: 80%;
+    }
+    .photo > div .rou{
+        width: 100%;
+    }
+    footer{
+        width: 492px;
+    }
+}
+@media screen  and (min-width: 461px ) and ( max-width: 660px ) {
+    /* *{
+        border: 1px solid red;
+    } */
+    .teste{
+        display: block;
+    }
+    .teste:hover + ul {
+        display: block;
+        color: blue;
+        display: flex;
+        flex-wrap: nowrap;
+        padding: 10px;
+    }
+    li{
+        display: inline;
+        padding: 9px;
+    }
+    ul{
+        display: flex;
+        flex-wrap: nowrap;
+        padding: 10px;
+        display: inline-block;
+        display: none;
+    }
+    input[type=search]{
+        border-radius: 50px;
+        padding: 10px;
+        border: none;
+        outline: none;
+    }
+    :placeholder-shown{
+        font-size: 15px;
+    }
+    input[type=submit]{
+        background-color: #000;
+        color: #f8f7f4;
+        padding: 0px 10px;
+        height: 40px;
+        width: 70px;
+        border-radius: 45px;
+        font-size: 15px;
+    }
+    .tag{
+        display: flex;
+        flex: 1 1 auto;
+        flex-wrap: nowrap;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        padding: 10px;
+    }
+    .foot2{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        padding: 5%;
+    }
+    .main3{
+        width: 420px;
+    }
+    .main1{
+        width: 100%;
+    }
+    nav{
+        width: 490px;
+    }
+    .photo{
+        width: 360px;
+        display: flex;
+        flex-direction: column;
+    }
+    img,.div2{
+        width: 100%;
+    }
+    .rou{
+        width: 50%;
+    }
+    .div2  > .vi{
+        width: 57%;
+    }
+    .div2  >.vid1{
+        width: 60%;
+        border-radius: 10px;
+    }
+    .div2  >.vid2{
+        width: 51%;
+        border-radius: 10px;
+    }
+    video{
+        width: 50%;
+        border-radius: 10px;
+    }
+    body{
+            overflow: hidden;
+            overflow-y: auto;
+    }
+    .div2{
+        max-width: 50%;
+        width: 100%;
+    }
+    .div-entete{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    #debut{
+        width: 420px;
+    }
+    .boxe{
+        width: 490px;
+    }
+    .photo{
+        width: 80%;
+    }
+    .photo > div .rou{
+        width: 100%;
+    }
+    footer{
+        width: 492px;
+    }
+}
+@media screen  and (min-width: 661px) and ( max-width:860px) {
+    /* *{
+        border: 1px solid red;
+    } */
+    body{
+        width: 100%;
+    }
+    .teste{
+        display: block;
+    }
+    .teste:hover + ul {
+        display: block;
+        color: blue;
+        display: flex;
+        flex-wrap: nowrap;
+        padding: 10px;
+    }
+    li{
+        display: inline;
+        padding: 9px;
+    }
+    ul{
+        display: flex;
+        flex-wrap: nowrap;
+        padding: 10px;
+        display: inline-block;
+        display: none;
+    }
+    input[type=search]{
+        border-radius: 50px;
+        padding: 10px;
+        border: none;
+        outline: none;
+    }
+    :placeholder-shown{
+        font-size: 15px;
+    }
+    input[type=submit]{
+        background-color: #000;
+        color: #f8f7f4;
+        padding: 0px 10px;
+        height: 40px;
+        width: 70px;
+        border-radius: 45px;
+        font-size: 15px;
+    }
+    .tag{
+        display: flex;
+        flex: 1 1 auto;
+        flex-wrap: nowrap;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        padding: 10px;
+    }
+    .foot2{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        padding: 5%;
+        /* width: 100%; */
+    }
+    .main3{
+        width: 80%;
+    }
+    .main1{
+        width: 100%;
+    }
+    nav{
+        width: 490px;
+    }
+    .photo{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    img,.div2{
+        width: 100%;
+    }
+    .rou{
+        width: 50%;
+    }
+    .div2  > .vi{
+        width: 57%;
+    }
+    .div2  >.vid1{
+        width: 60%;
+        border-radius: 10px;
+    }
+    .div2  >.vid2{
+        width: 51%;
+        border-radius: 10px;
+    }
+    video{
+        width: 50%;
+        border-radius: 10px;
+    }
+    body{
+            overflow: hidden;
+            overflow-y: auto;
+    }
+    .main2{
+        width: 100%;
+    }
+    .div2{
+        max-width: 50%;
+        width: 100%;
+    }
+    .div-entete{
+        width: 760px;
+        display: flex;
+        flex-direction: column;
+    }
+    #debut{
+        width: 80%;
+    }
+    .boxe{
+        width: 490px;
+    }
+    .photo{
+        width: 80%;
+    }
+    .photo > div .rou{
+        width: 100%;
+    }
+    footer{
+        width: 100%;
+    }
 }
